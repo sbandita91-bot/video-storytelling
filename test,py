@@ -1,0 +1,12 @@
+import cv2, os
+
+folder = "data/videos"
+files = [f for f in os.listdir(folder) if f.endswith((".avi", ".mp4"))]
+print("Videos found:", len(files))
+
+path = os.path.join(folder, files[0])
+cap = cv2.VideoCapture(path)
+print("File:", path)
+print("Opened:", cap.isOpened())
+print("Frames:", cap.get(cv2.CAP_PROP_FRAME_COUNT))
+print("FPS:", cap.get(cv2.CAP_PROP_FPS))

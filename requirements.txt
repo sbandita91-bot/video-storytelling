@@ -1,0 +1,7 @@
+torch
+torchvision
+opencv-python
+scenedetect[opencv]
+scikit-learn
+numpy
+tqdm
